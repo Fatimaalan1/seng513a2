@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="quizStyle.css">
+  <title>Quiz Time!</title>
+</head>
+
+<body>
+    <section id="firstPage">
+        <div class="questionView">
+            <h1>Quiz Time!</h1>
+        </div>
+        <div class="userName">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" placeholder="Enter your first name"><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" placeholder="Enter your last name"> 
+        </div>
+        <div id = "errorMessage"></div>
+        <div class="buttons">
+            <button id = "startQuiz">
+                Start Quiz
+            </button>
+
+        </div>
+    </section>
+
+    <section id="quizQuestions" style="display:none;">
+        <div class = "questionContainer">
+            
+            <div class="questionView">
+                <div class="q">
+                    <span>Question</span>
+                    <span id = "qNum">1</span>
+                </div>
+                <h2 id="questionText">Question will appear here</h2>
+            </div>
+            <div class = 'difficultyView'>
+                <span>Difficulty:</span>
+                <span id = "difficultyLevel">Easy</span>
+            </div>
+            <div class = "categoryView">
+                <span>Category:</span>
+                <span id = "categoryName">General Knowledge</span>
+            </div>
+            <div class = "scoreView">
+                <span> Current Score: </span>
+                <span id = "currentScore">0</span>
+            </div>
+            <div class="answerChoices" id="answerChoices"></div>
+            
+            <div id="answerResult" class="answerResult" style="display:none;"></div>
+            
+            <div class="buttons">
+                <button id="nextQn" style="display:none;">Next Question</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="scorePage" style="display:none;">
+        <h1>Quiz Over!</h1>
+        <div class="finalScore">
+            <span id="finalScoreMsg"></span>
+        </div>
+        <div class="buttons">
+            <button id = "newQuiz">New Quiz!</button>
+        </div>
+    </section>
+
+<script src="quiz.js"></script>
+</body>
+</html>
